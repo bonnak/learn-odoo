@@ -22,6 +22,10 @@ class EstatePropertyModel(models.Model):
         ('East', 'East'),
         ('West','West'),
     ])
+    state = fields.Selection([
+        ('New', 'New'),
+        ('Offer Received', 'Offer Received'),
+    ])
     # total_area = fields.Float(compute='_compute_total_area')
 
     # @api.depends('living_area', 'garden_area')
